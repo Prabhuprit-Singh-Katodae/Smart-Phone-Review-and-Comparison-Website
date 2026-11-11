@@ -1,0 +1,404 @@
+/* Light theme: warm-white + soft grey, charcoal text/nav, restrained amber accent */
+:root {
+    --bg: #faf8f4;
+    --soft: #eeebe5;
+    --ink: #2a2c2f;
+    --line: #d9d5cc;
+    --amber: #c98a1b;
+    --mut: #6b6a66
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    line-height: 1.1
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    margin: .2em 0
+}
+
+a {
+    color: inherit
+}
+
+:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 2px
+}
+
+.top {
+    background: var(--ink);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 1.2rem;
+    border-bottom: 3px solid var(--amber)
+}
+
+.top a {
+    text-decoration: none
+}
+
+.top nav {
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap
+}
+
+.top nav a:hover {
+    color: var(--amber)
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.1rem
+}
+
+.ribbon {
+    background: var(--amber);
+    color: #1d1d1d;
+    padding: .35rem 1.2rem;
+    font-size: .9rem;
+    font-weight: 600
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem 3rem
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 1rem 1.2rem;
+    color: var(--mut);
+    font-size: .85rem;
+    text-align: center
+}
+
+.hero {
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 1.5rem
+}
+
+.hero p {
+    max-width: 34rem;
+    font-size: 1.15rem;
+    color: var(--mut)
+}
+
+.btn,
+button {
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+    padding: .6rem 1.1rem;
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn:hover,
+button:hover {
+    background: #000
+}
+
+.btn.amb {
+    background: var(--amber);
+    color: #1d1d1d
+}
+
+.btn.ghost,
+button.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink)
+}
+
+button.sm {
+    padding: .25rem .6rem;
+    font-size: .85rem
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.cb {
+    padding: .9rem;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    flex: 1
+}
+
+.cb .row {
+    margin-top: auto;
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap
+}
+
+.ph {
+    background: var(--soft);
+    height: 180px;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--line);
+    overflow: hidden
+}
+
+.ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block
+}
+
+.ph.big {
+    height: 280px;
+    border-radius: 6px
+}
+
+.ph.no-photo {
+    font-size: 1rem;
+    color: var(--muted)
+}
+
+.photo-credit {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted)
+}
+
+.photo-credit a {
+    color: var(--muted)
+}
+
+small,
+.mut {
+    color: var(--mut)
+}
+
+.price {
+    font-weight: 700
+}
+
+.tag {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    padding: .05rem .5rem;
+    border-radius: 99px;
+    font-size: .78rem
+}
+
+.nv {
+    color: #9a6a10;
+    font-style: italic
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: .6rem;
+    margin-bottom: 1rem
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: .5rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff;
+    width: 100%
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: .7rem
+}
+
+.err {
+    color: #b3261e;
+    font-size: .85rem;
+    min-height: 1em;
+    display: block
+}
+
+.ok {
+    color: #1d6b34;
+    font-weight: 600
+}
+
+.scroll {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 560px
+}
+
+th,
+td {
+    padding: .6rem .8rem;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top
+}
+
+th {
+    background: var(--soft)
+}
+
+.box {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem
+}
+
+.tabs {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .5rem
+}
+
+.adm {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh
+}
+
+.adm aside {
+    background: var(--ink);
+    color: #fff;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.adm aside a {
+    text-decoration: none;
+    padding: .3rem 0
+}
+
+.adm aside a:hover,
+.adm aside a.on {
+    color: var(--amber)
+}
+
+.adm main {
+    padding: 1.5rem;
+    min-width: 0
+}
+
+.adm aside button {
+    background: var(--amber);
+    color: #1d1d1d
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem
+}
+
+.stat {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--amber);
+    padding: 1rem
+}
+
+.stat b {
+    font-size: 1.9rem;
+    display: block
+}
+
+.chart {
+    width: 100%;
+    max-width: 520px
+}
+
+#toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 4px;
+    display: none
+}
+
+@media(max-width:700px) {
+    .adm {
+        grid-template-columns: 1fr
+    }
+
+    .adm aside {
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+}
+
+@media(prefers-reduced-motion:no-preference) {
+
+    .btn,
+    button {
+        transition: background .15s
+    }
+}
